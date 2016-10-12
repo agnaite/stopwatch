@@ -1,21 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+var Stopwatch = React.createClass({
+  getInitialState : function() {
+    return {seconds : 0, minutes : 0, hours : 0};
+  },
+  startWatch : function() {
+    console.log('start');
+  },
+  stopWatch : function() {
+    console.log('stop');
+  },
+  clearWatch : function() {
+    console.log('clear');
+  },
+  render : function() {
+    return <div>
+              <div className="stopwatch">
+                <div id="hours">00</div>:
+                <div id="minutes">00</div>:
+                <div id="seconds">00</div>
+              </div>
+              <div className="buttons">
+                <button id="start" onClick={this.startWatch}>Start</button>
+                <button id="stop" onClick={this.stopWatch}>Stop</button>
+                <button id="clear" onClick={this.clearWatch}>Clear</button>
+              </div>
+            </div>
   }
-}
+});
 
-export default App;
+export default Stopwatch;
