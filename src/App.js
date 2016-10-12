@@ -1,4 +1,5 @@
 import React from 'react';
+import Numbers from './Number.js';
 
 var timerId = '';
 
@@ -41,9 +42,9 @@ var Stopwatch = React.createClass({
   render : function() {
     return <div>
               <div className="stopwatch">
-                <div id="hours">{this.state.hours}</div>:
-                <div id="minutes">{this.state.minutes}</div>:
-                <div id="seconds">{this.state.seconds}</div>
+                <Numbers number={this.state.hours} />:
+                <Numbers number={this.state.minutes} />:
+                <Numbers number={this.state.seconds} />
               </div>
               <div className="buttons">
                 <button id="start" onClick={this.startWatch}>Start</button>
