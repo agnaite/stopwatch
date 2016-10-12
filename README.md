@@ -1,1 +1,1 @@
-Make a stopwatch in React! ⏰
+Make a stopwatch in React workshop ⏰
